@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature converter</title>
+    <script src="https://kit.fontawesome.com/d71332221e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo"><i class="fas fa-thermometer-half"></i></div>
+    </header>
+    <main>
+        <div id="converter">
+            <div class="form">
+                <form @submit.prevent ="convert()">
+                    <label> Degrees<br>
+                        <input v-model="degrees" class="input" type="text" required>
+                    </label>
+                    <label> From<br>
+                        <select @change="convertFrom($event)" class="input" name="type" required>
+                            <option value="" selected>-- Select --</option>
+                            <option value="°F">Fahrenheit</option>
+                            <option value="°C">Celsius</option>
+                            <option value="K">Kelvin</option>
+                        </select>
+                    </label>                
+                    <label>To<br>
+                        <select @change="convertTo($event)" class="input" name="type" required>
+                            <option value="" selected>-- Select --</option>
+                            <option value="°F">Fahrenheit</option>
+                            <option value="°C">Celsius</option>
+                            <option value="K">Kelvin</option>
+                        </select>
+                    </label>
+                    <input type="submit" value="Convert">
+                </form>
+            </div>
+            <div id="resultContainer" class="form"><div class="result">{{result}} {{type}}</div></div>
+        </div>
+    </main>
+</body>
+<script src="scripts.js"></script>  
+</html>

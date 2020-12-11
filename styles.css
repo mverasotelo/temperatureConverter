@@ -1,0 +1,131 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:1rem;
+    background: rgb(247, 198, 209); 
+    box-sizing: border-box;   
+}
+
+header{
+    background:rgb(51,104,189);
+    position:fixed;
+    width:100%;
+    height:8rem;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content: center;
+    justify-items: center;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.30);
+}
+
+.logo{
+    align-self: center;
+    display:flex;
+    border-radius: 360%;
+    border: solid 4px black;
+    background: white;
+    width:5rem;
+    height:5rem;
+}
+
+.fas{
+    font-size: 3rem;
+    margin:auto;
+}
+
+header div{
+    display:flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    padding-top:12rem;
+}
+
+#converter{
+    width:70%;
+    margin:0 auto;
+    border-radius:5px;
+    display:flex;
+    background: rgb(96, 116, 163);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.20);
+}
+
+.form{
+    height:2rem;
+    width:80%;
+    height:100%;
+    font-size:1.2rem;
+    margin:0 auto;
+    display:flex;
+    flex-direction: column;    
+    padding:3rem;
+}
+
+.form label{
+    margin-bottom:5%;
+}
+
+.input{
+    margin:0 auto;
+    font-size:1.2rem;
+    height:3rem;
+    width:100%;
+    border:3px;
+    outline:none;
+    padding:0;
+}
+
+form input[type="submit"]{
+    letter-spacing: 2px;
+    padding:1rem;
+    font-size:1.2rem;
+    background: #333;
+    color:white;
+    border:0rem;
+    height:3rem;
+    width:100%;
+    outline: none;
+    margin-top:5%;
+}
+
+#resultContainer{
+    display:flex;
+    flex-direction: column;
+}
+
+.result{
+    min-height:3.8rem;
+    align-self: center;
+    padding:1rem;
+    width:90%;
+    font-size:3rem;
+    margin:auto;
+    text-align: center;
+    font-weight: bold;
+    border:solid 5px white;
+}
+
+@media screen and (max-width:1024px){
+    #resultContainer{
+        height:95%;
+    }
+
+    .result{
+        font-size:5vh;
+        min-height: 0;
+    }
+
+    #converter{
+        width:95%;
+        flex-direction: column;        
+        border-radius:5px;
+        display:flex;
+        background: rgb(96, 116, 163);
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.20);
+    }
+
+    main{
+        padding-top:9.5rem;
+    }
+}
