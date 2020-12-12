@@ -5,7 +5,7 @@ new Vue({
         degrees:"",
         from:"",
         to:"",
-        result:"",
+        result:"Indicate a temperature to convert",
         type:""
     },
     methods:{
@@ -14,6 +14,16 @@ new Vue({
         },
         convertFrom: function(event){
             this.from= event.target.value;
+        },
+        validate: function(){
+            if(isNaN(this.degrees)){
+                this.result="You must enter a number";
+                this.type="";
+            }
+            else{
+                this.result="";
+                this.type="";
+            }
         },
         convert: function(){
             this.type=this.to;

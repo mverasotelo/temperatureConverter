@@ -17,7 +17,7 @@
             <div class="form">
                 <form @submit.prevent ="convert()">
                     <label> Degrees<br>
-                        <input v-model="degrees" class="input" type="text" required>
+                        <input v-model="degrees" class="input" type="text" @change="validate()" required>
                     </label>
                     <label> From<br>
                         <select @change="convertFrom($event)" class="input" name="type" required>
